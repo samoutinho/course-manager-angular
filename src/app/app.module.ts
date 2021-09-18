@@ -1,3 +1,4 @@
+import { CourseInfoComponent } from './courses/course-info.component';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,6 +15,7 @@ import { StarComponent } from './star/star.component';
   declarations: [
     AppComponent,
     CourseListComponent,
+    CourseInfoComponent,
     StarComponent,
     ReplacePipe,
     NavBarComponent,
@@ -31,6 +33,10 @@ import { StarComponent } from './star/star.component';
       {
         path: 'courses',
         component: CourseListComponent,
+      },
+      {
+        path: 'courses/info/:id',
+        component: CourseInfoComponent,
       },
       {
         path: '**',
