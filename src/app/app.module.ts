@@ -6,19 +6,17 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { Error404Component } from './error-404/error-404.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { NavBarComponent } from './core/component/nav-bar/nav-bar.component';
 import { CourseModule } from './courses/course.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavBarComponent,
-    Error404Component,
-  ],
+  declarations: [AppComponent, Error404Component],
   imports: [
     CourseModule,
     BrowserModule,
     HttpClientModule,
+    CoreModule,
     RouterModule.forRoot([
       {
         path: '',
